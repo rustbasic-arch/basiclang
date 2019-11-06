@@ -1,7 +1,9 @@
 
 pub mod auth;
-
 pub mod friend;
+
+extern crate mylib;
+use mylib::authmod::authImpl::createAuth;
 
 fn main() {
 
@@ -10,5 +12,8 @@ fn main() {
     friend::friendImpl::addFriend(&friendName);
 
     drop(friendName);
+    createAuth();
+
+ 
 
 }

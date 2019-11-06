@@ -37,7 +37,7 @@ impl Show for Test2{
 }
 //定义一个测试函数
 //t:&impl Show 意思是实现了该接口的类型对象
-fn test_trait(t:impl Show){
+fn test_trait(t:& impl Show){
 	t.show();
 }
 fn main() {
