@@ -1,0 +1,1 @@
+E:\workspace\fengyun\testMasterModCrate\app\target\debug\app.exe: E:\workspace\fengyun\testMasterModCrate\app\src\auth\authImpl.rs E:\workspace\fengyun\testMasterModCrate\app\src\friend\friendImpl.rs E:\workspace\fengyun\testMasterModCrate\app\src\auth\mod.rs E:\workspace\fengyun\testMasterModCrate\app\src\friend\mod.rs E:\workspace\fengyun\testMasterModCrate\app\src\main.rs
