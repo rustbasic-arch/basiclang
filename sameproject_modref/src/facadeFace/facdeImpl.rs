@@ -1,7 +1,5 @@
 ﻿
-use crate::msg::msgImpl::sendMsg;
-use crate::auth::authImpl::login;
+use ::auth::authImpl::login;
 pub fn doMediator(){
-    login();
-    sendMsg();
+   login();
 }

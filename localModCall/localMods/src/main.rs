@@ -1,5 +1,5 @@
 pub mod auth;
-pub mod friend;
+pub mod friend ;
 
 fn main() {
 
