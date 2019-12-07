@@ -38,5 +38,6 @@ rsconnect/
 *.json
 *.o
 *.d
+target
 
 testMasterModCrate/app/target/debug/

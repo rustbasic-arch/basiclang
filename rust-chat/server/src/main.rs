@@ -17,7 +17,7 @@ fn main() {
   
 }
 
-fn handle_client(mut stream: TcpStream) {
+fn handle_client(mut stream:&TcpStream) {
     println!("request in");
     stream.write(b"welcome\r\n").unwrap();
 }

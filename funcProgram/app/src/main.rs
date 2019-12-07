@@ -32,7 +32,7 @@ fn main() {
         z*z
         });
 
-        println!("value={:?}",value)
+        println!("value={:#?}",value)
 
         // for i in value.iter(){
         //     println!("each:{}",i);
