@@ -1,0 +1,14 @@
+[package]
+name = "app"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+
+[dependencies]
+num = "*"
+rand = "*"
+time = "*"
+
+
+[[bin]] 
+name = "dance"
+path = "src/main.rs"

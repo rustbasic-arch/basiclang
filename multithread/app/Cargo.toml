@@ -1,0 +1,10 @@
+[package]
+name = "app"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+
+[dependencies]
+simple_logger = "*"
+threadpool = "*"
+num_cpus = "*"
+mio ="*"
