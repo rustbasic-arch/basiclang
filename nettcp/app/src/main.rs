@@ -21,7 +21,6 @@ fn  ConnWriteRoutine(mut stream:TcpStream){
       println!("has write:num= {}",num);
    }
     
-}
 
 fn onRecvConn(listener:TcpListener){
    for stream in listener.incoming()
