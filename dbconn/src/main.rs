@@ -1,3 +1,9 @@
+/***
+ * multi thread 
+ * multi port
+ * */
+
+
 use std::net::{TcpListener,TcpStream};
 use std::collections::HashMap;
 use std::sync::Arc;
@@ -74,7 +80,7 @@ fn incommingConn(lis:TcpListener,idx:i32){
      }
 }
 
-
+//multi
 fn main() {
     let  mut handlers = vec![];
     // let  listenerMap = HashMap::new();
