@@ -24,8 +24,10 @@ fn  createListener(ip:&str,port:i32)->TcpListener{
 
 fn doWriteRoutine(safeBox:Arc<Mutex<TcpStream>>,idx:i32)
 {
-    let basemsg = "微博";
-    let msg = format!("idx:{},msg:{}",idx,basemsg);
+    // let basemsg = String::from("weibo");
+    let basemsg2 = "weibo";
+    // let msg = format!("idx:{},msg:{}",idx,&basemsg);
+    let msg = format!("idx:{},msg:{}",idx,basemsg2);//format!("{}",&str); &str type needed
     thread::spawn(move || {
         let mut writeExecuter = safeBox.lock().unwrap();
         loop{
@@ -58,9 +60,9 @@ fn doWriteRoutine(safeBox:Arc<Mutex<TcpStream>>,idx:i32)
 }
 
 
-fn incommingConn(lis:TcpListener,idx:i32){
+fn incommingConn(lis:Arc<Mutex<TcpListener>>,idx:i32){
     println!("开启侦听端口:{}",idx);
-     for streamBox in lis.incoming(){
+     for streamBox in lis.lock().unwrap().incoming(){
         match streamBox 
         {
             Ok(stream) =>{
@@ -83,17 +85,24 @@ fn incommingConn(lis:TcpListener,idx:i32){
 //multi
 fn main() {
     let  mut handlers = vec![];
-    // let  listenerMap = HashMap::new();
+    let  mut listenerMap = HashMap::new();
     for i in 9000..9100
     {
         let listener = createListener("127.0.0.1",i);
+        let k =format!("{}:{}","127.0.0.1",i);
+      
+        let safeBox = Arc::new(Mutex::new(listener));
+        let pre_InthreadBox1 = safeBox.clone();//pre clone before in thread
+        let pre_InthreadBox2 = safeBox.clone();//can dispath ability
+        let pre_InthreadBox3 = safeBox.clone();//can dispath ability
         let h = thread::spawn(move || {
-            incommingConn(listener,i);
+            incommingConn(pre_InthreadBox1,i);
         });
-        
-        handlers.push(h);
+        listenerMap.insert(k, safeBox);// pass h  but h not implemenets copy trait ,u know Cell has implements copy tra
+        handlers.push(h);//  pass h
     }
 
+    for 
 
     for  h in handlers{
             h.join().unwrap();

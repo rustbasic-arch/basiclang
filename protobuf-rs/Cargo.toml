@@ -1,0 +1,11 @@
+[package]
+name = "protobuf-rs"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+[source.crates-io]
+replace-with = "rustcc"
+
+[source.rustcc]
+registry = "https://code.aliyun.com/rustcc/crates.io-index"
+
+[dependencies]
