@@ -1,0 +1,6 @@
+[package]
+name = "console_interactive_io_value"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+
+[dependencies]
