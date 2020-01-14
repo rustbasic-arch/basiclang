@@ -1,0 +1,6 @@
+[package]
+name = "trait_tmpl_impl_overload"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+
+[dependencies]

@@ -1,0 +1,6 @@
+[package]
+name = "c_style_ptr_cal"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+
+[dependencies]
