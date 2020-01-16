@@ -1,0 +1,6 @@
+[package]
+name = "lifetime_design"
+version = "0.1.0"
+authors = ["wenweiping <wenweiping@huayi.com>"]
+
+[dependencies]
